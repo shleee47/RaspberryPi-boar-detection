@@ -24,7 +24,7 @@ class ModelTester:
         self.ckpt = ckpt 
 
         print("Start to Load Boar model")
-        checkpoint = torch.load(self.ckpt)
+        checkpoint = torch.load(self.ckpt, map_location=torch.device('cpu'))
         pdb.set_trace()
         boar_model.load_state_dict(checkpoint['model_state_dict'], strict=False)
         #self.boar_model = boar_model.cuda()
