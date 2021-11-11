@@ -1,0 +1,22 @@
+use_tb_logger: true
+
+#### datasets
+datasets:
+  demo: ./data/ 
+  
+dataloader:
+  test:
+    batch_size: 1
+    shuffle: false
+    # pin_memeory: true
+    num_workers: 10
+
+MYNET:
+  n_classes: 2
+
+
+demo:
+  boar: ./model/mobileNetV2-boar-61.pt
+  device: 0
+
+device: 0
