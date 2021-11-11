@@ -1,1 +1,1 @@
-python3 demo.py -b './' -c './config/' -d 'config'
+python3 demo.py -b './' -d 'config'
