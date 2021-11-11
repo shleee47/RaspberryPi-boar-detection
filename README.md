@@ -7,6 +7,8 @@
 #### 아래 명령어를 통해서 라즈베리파이에 깃허브를 설치해주세요.
 ```
 $ sudo apt install git
+$ git config --global user.name "USER NAME"
+$ git config --global user.email "EMAIL@gmail.com"   
 ```      
 
    
@@ -15,8 +17,6 @@ $ sudo apt install git
 #### 라즈베리파이에 코드를 받으세요.  
 ```
 $ git clone https://github.com/shleee47/RaspberryPi-boar-detection.git
-$ git config --global user.name "USER NAME"
-$ git config --global user.email "EMAIL@gmail.com"   
 ```     
 ### 2. Create the conda environment.   
 #### 콘다 환경을 만들어주세요.   
@@ -24,8 +24,17 @@ $ git config --global user.email "EMAIL@gmail.com"
 RaspberryPi-boar-detection/  
 $ sh environment.sh
 ```      
+
+### 3. Download the model weights from the drive and place them in the path below.
+#### 구글 드라이브에서 모델을 다운로드 하고 아래 경로에 위치시키세요.
+https://drive.google.com/drive/folders/1xJzzz2zDtOeC9jjOG_3InWIAUWz9MmP1?usp=sharing   
+```
+RaspberryPi-boar-detection/  
+  └── model/
+    └── mobileNetV2-boar-61.pt
+```            
    
-### 3. Run demo.sh for demo   
+### 4. Run demo.sh for demo   
 #### 데모를 실행해주세요.
 ```
 RaspberryPi-boar-detection/  
@@ -36,7 +45,7 @@ $ sh demo.sh
 ====== Ready for SED Inference ======
 ```      
    
-### 4. Move the wave files to the path below.
+### 5. Move the wave files to the path below.
 #### 아래 경로에 음원을 이동해주세요.
 ```
 RaspberryPi-boar-detection/  
