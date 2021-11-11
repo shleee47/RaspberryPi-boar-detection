@@ -116,22 +116,22 @@ class Data_Reader(Dataset):
 
 class Inference:
     
-    def __init__(self, config, args):
+    def __init__(self, args):
         
         '''1. Dataset Preparation'''
-        self.test_data_path = config['datasets']['demo']
+        self.test_data_path = './data'
         test_list = []
         #print(test_list)
         self.test_dataset = Data_Reader(test_list)
         test_loader = DataLoader(dataset=self.test_dataset, batch_size=1, shuffle=False, pin_memory = True, num_workers=0)
 
         '''2. Model'''
-        n_classes = config['MYNET']['n_classes']
+        n_classes = 2
         boar_PANNs = MobileNetV2(32000, 1024, 1024//4,64, 0.0, None, n_classes)
         boar_model = finetunePANNs(boar_PANNs, n_classes)
     
         '''3. Tester'''
-        self.tester = ModelTester(boar_model, test_loader, config['demo'], config['device'])
+        self.tester = ModelTester(boar_model, test_loader, './model/mobileNetV2-boar-61.pt', 0)
         print('========  Ready for SED Inference  =======')
     
     def infer(self):
@@ -148,14 +148,13 @@ if __name__ == '__main__':
     os.environ["CUDA_VISIBLE_DEVICES"]="1"
     parser = argparse.ArgumentParser()
     parser.add_argument('-b', '--base_dir', type=str, default='.', help='Root directory')
-    parser.add_argument('-c', '--config', type=str, help='Path to option YAML file.')
     parser.add_argument('-d', '--dataset', type=str, default='config', help='configuration file')
     args = parser.parse_args()
 
-    '''Load Config'''
-    with open(os.path.join(args.config, args.dataset + '.yml'), mode='r') as f:
-        config = yaml.load(f,Loader=yaml.FullLoader)
+    #'''Load Config'''
+    #with open(os.path.join(args.config, args.dataset + '.yml'), mode='r') as f:
+    #    config = yaml.load(f,Loader=yaml.FullLoader)
 
     '''Inference Mode'''
-    a = Inference(config,args)
+    a = Inference(args)
     a.infer()
