@@ -14,7 +14,7 @@ $ sudo apt install git
 ### 1. Get the code on Raspberry Pi.
 #### 라즈베리파이에 코드를 받으세요.  
 ```
-$ git clone 
+$ git clone https://github.com/shleee47/RaspberryPi-boar-detection.git
 ```     
 ### 2. Create the conda environment.   
 #### 콘다 환경을 만들어주세요.   
