@@ -1,3 +1,12 @@
+## OPTION1
+python3 -m pip install --upgrade --ignore-installed pip setuptools
+python3 -m pip install librosa==0.8.0
+pip install dcase_util
+pip install PyYAML
+
+
+'''
+## OPTION2
 sudo apt-get install python3-scipy
 sudo apt-get install python3-sklearn
 ## 6. Asia, 69. Seoul 선택
@@ -13,3 +22,5 @@ sudo LLVM_CONFIG=/usr/bin/llvm-config-7 pip3 install numba
 ## pip3 install --ignore-installed joblib
 sudo LLVM_CONFIG=/usr/bin/llvm-config-7 pip3 install librosa
 pip3 install dcase_util
+pip3 install PyYAML
+'''
