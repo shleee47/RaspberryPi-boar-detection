@@ -2,7 +2,17 @@
 python3 -m pip install --upgrade --ignore-installed pip setuptools
 python3 -m pip install librosa==0.8.0
 pip install dcase_util
-pip install PyYAML
+pip install -U PyYAML
+
+sudo apt-get update
+sudo apt-get dist-upgrade
+sudo apt install libopenblas-dev libblas-dev m4 cmake cython python3-dev python3-yaml python3-setuptools
+sudo apt-get install libavutil-dev libavcodec-dev libavformat-dev libswscale-dev
+
+git clone https://github.com/sungjuGit/PyTorch-and-Vision-for-Raspberry-Pi-4B.git
+cd PyTorch-and-Vision-for-Raspberry-Pi-4B
+sudo install torch-1.8.0a0+56b43f4-cp37-cp37m-linux_armv7l.whl
+
 
 
 '''
@@ -22,5 +32,14 @@ sudo LLVM_CONFIG=/usr/bin/llvm-config-7 pip3 install numba
 ## pip3 install --ignore-installed joblib
 sudo LLVM_CONFIG=/usr/bin/llvm-config-7 pip3 install librosa
 pip3 install dcase_util
-pip3 install PyYAML
+pip3 install -U PyYAML
+
+sudo apt-get update
+sudo apt-get dist-upgrade
+sudo apt install libopenblas-dev libblas-dev m4 cmake cython python3-dev python3-yaml python3-setuptools
+sudo apt-get install libavutil-dev libavcodec-dev libavformat-dev libswscale-dev
+
+git clone https://github.com/sungjuGit/PyTorch-and-Vision-for-Raspberry-Pi-4B.git
+cd PyTorch-and-Vision-for-Raspberry-Pi-4B
+sudo install torch-1.8.0a0+56b43f4-cp37-cp37m-linux_armv7l.whl
 '''
