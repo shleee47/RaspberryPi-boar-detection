@@ -7,7 +7,7 @@ from torch.utils.data.dataset import Dataset
 import torch
 import torch.nn as nn
 import pdb
-import yaml 
+#import yaml 
 import numpy as np
 from torch.utils.data import DataLoader
 import os
@@ -25,7 +25,7 @@ class ModelTester:
 
         print("Start to Load Boar model")
         checkpoint = torch.load(self.ckpt, map_location=torch.device('cpu'))
-        pdb.set_trace()
+        #pdb.set_trace()
         boar_model.load_state_dict(checkpoint['model_state_dict'], strict=False)
         #self.boar_model = boar_model.cuda()
         self.boar_model.eval()
@@ -145,7 +145,7 @@ class Inference:
                 sys.exit("======= Inference Finished =======")
 
 if __name__ == '__main__':
-    os.environ["CUDA_VISIBLE_DEVICES"]="1"
+    #os.environ["CUDA_VISIBLE_DEVICES"]="0"
     parser = argparse.ArgumentParser()
     parser.add_argument('-b', '--base_dir', type=str, default='.', help='Root directory')
     parser.add_argument('-d', '--dataset', type=str, default='config', help='configuration file')
