@@ -18,8 +18,8 @@ $ git config --global user.email "EMAIL@gmail.com"
 ```
 $ git clone https://github.com/shleee47/RaspberryPi-boar-detection.git
 ```     
-### 2. Create the conda environment.   
-#### 콘다 환경을 만들어주세요.   
+### 2. Create the environment.   
+#### 환경을 만들어주세요.   
 ```
 RaspberryPi-boar-detection/  
 $ sh environment.sh
